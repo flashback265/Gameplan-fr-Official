@@ -1,7 +1,7 @@
 import React from 'react'
 import { IoClose } from 'react-icons/io5'
 import { Link, useNavigate } from 'react-router-dom'
-import { useGlobalContext } from '../provider/GlobalProvider'
+//import { useGlobalContext } from '../provider/GlobalProvider'
 import { DisplayPriceInRupees } from '../utils/DisplayPriceInRupees'
 import { FaCaretRight } from "react-icons/fa";
 import { useSelector } from 'react-redux'
@@ -11,7 +11,7 @@ import imageEmpty from '../assets/empty_cart.webp'
 import toast from 'react-hot-toast'
 
 const DisplayCartItem = ({close}) => {
-    const { notDiscountTotalPrice, totalPrice ,totalQty} = useGlobalContext()
+    //const { notDiscountTotalPrice, totalPrice ,totalQty} = useGlobalContext()
     const cartItem  = useSelector(state => state.cartItem.cart)
     const user = useSelector(state => state.user)
     const navigate = useNavigate()

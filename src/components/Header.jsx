@@ -21,8 +21,8 @@ const Header = () => {
     const [openUserMenu,setOpenUserMenu] = useState(false)
     const cartItem = useSelector(state => state.cartItem.cart)
     // const [totalPrice,setTotalPrice] = useState(0)
-    // const [totalQty,setTotalQty] = useState(0)
-    const { totalPrice, totalQty} = useGlobalContext()
+    const [totalQty,setTotalQty] = useState(0)
+  //  const { totalPrice , totalQty} = useGlobalContext()
     const [openCartSection,setOpenCartSection] = useState(false)
  
     const redirectToLoginPage = ()=>{
@@ -60,7 +60,7 @@ const Header = () => {
     <header className='h-24 lg:h-20 lg:shadow-md sticky top-0 z-40 flex flex-col justify-center gap-1 bg-white'>
         {
             !(isSearchPage && isMobile) && (
-                <div className='container mx-auto flex items-center px-2 justify-between'>
+                <div className='container'>
                                 {/**logo */}
                                 <div className='h-full'>
                                     <Link to={"/"} className='h-full flex justify-center items-center'>
@@ -70,14 +70,15 @@ const Header = () => {
                                             height={60}
                                             alt='logo'
                                             className='hidden lg:block'
-                                        />
+                                        /> 
+{                                         
                                         <img 
                                             src={logo}
                                             width={120}
                                             height={60}
                                             alt='logo'
                                             className='lg:hidden'
-                                        />
+                                        /> }
                                     </Link>
                                 </div>
 
@@ -88,14 +89,14 @@ const Header = () => {
 
 
                                 {/**login and my cart */}
-                                <div className=''>
+                                <div >
                                     {/**user icons display in only mobile version**/}
-                                    <button className='text-neutral-600 lg:hidden' onClick={handleMobileUser}>
-                                        <FaRegCircleUser size={26}/>
+                                    <button className='account-btn' onClick={handleMobileUser}>
+                                        <FaRegCircleUser size={20}/>
                                     </button>
 
                                       {/**Desktop**/}
-                                    <div className='hidden lg:flex  items-center gap-10'>
+                                    <div className=' items-center gap-10'>
                                         {
                                             user?._id ? (
                                                 <div className='relative'>
@@ -121,16 +122,20 @@ const Header = () => {
                                                     }
                                                     
                                                 </div>
-                                            ) : (
-                                                <button onClick={redirectToLoginPage} className='text-lg px-2'>Login</button>
+                                            ) : ( 
+                                                
+                                                <button className='Login-btn'  onClick={redirectToLoginPage} >Login</button>
                                             )
                                         }
-                                        <button onClick={()=>setOpenCartSection(true)} className='flex items-center gap-2 bg-green-800 hover:bg-green-700 px-3 py-2 rounded text-white'>
+                                        <button className="cart-btn"  onClick={()=>setOpenCartSection(true)} >
                                             {/**add to card icons */}
-                                            <div className='animate-bounce'>
-                                                <BsCart4 size={26}/>
-                                            </div>
-                                            <div className='font-semibold text-sm'>
+                                          <div >
+                                                 <p>
+                                                <BsCart4 size={20}/>
+                                            </p>
+                                          </div>
+                                           
+                                            <div className=''>
                                                 {
                                                     cartItem[0] ? (
                                                         <div>
@@ -138,7 +143,8 @@ const Header = () => {
                                                             <p>{DisplayPriceInRupees(totalPrice)}</p>
                                                         </div>
                                                     ) : (
-                                                        <p>My Cart</p>
+                                                        <p >My Cart</p> 
+                                                        
                                                     )
                                                 }
                                             </div>    

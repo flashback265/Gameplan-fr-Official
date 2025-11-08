@@ -1,11 +1,8 @@
-
-
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities;   */
-
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;   
+
 
 html{
     scroll-behavior: smooth;
@@ -14,8 +11,10 @@ html{
 body{
     font-family: "Poppins", sans-serif;
     font-weight: 100;
-    font-style: normal;
-   /* @apply bg-blue-50 text-neutral-700 scroll-smooth */
+    font-style: normal; 
+    scroll-behavior: smooth;
+      background: url('./assets/night.jpg') no-repeat center center/cover; 
+   /* @apply bg-blue-50 text-neutral-700 scroll-smooth  */
 }
 
 .scrollbar-none::-webkit-scrollbar{
@@ -24,10 +23,95 @@ body{
 
 .scrollbarCustom::-webkit-scrollbar{
     width: 10px;
-    /* @apply bg-slate-100 */
+     /* @apply bg-slate-100  */
 } 
 
  .scrollbarCustom::-webkit-scrollbar-thumb{ 
     color: aqua;
-    /* @apply bg-blue-100 rounded-full */
+    /* @apply bg-blue-100 rounded-full  */
+}  
+
+.search-button{
+    color:aqua; 
+    border: 2px solid; 
+    border-radius: 50px;
+}
+
+.animation-text{
+    color: rgb(34, 8, 124); 
+    font-weight: 600; 
+    padding-left: 3%;
+} 
+
+.header-list{
+    color:#9c4700; 
+    display:flexbox;
+    float:right;
+    border-radius: 10px; 
+     margin-left: 10px; 
+    
+}  
+.header-list-button{
+height:50px;
+}
+.header-list:hover{
+    color:#f50418;
+}
+
+.btn-pri{
+    color:antiquewhite
+}  
+.Login-btn{
+    padding:15px; 
+    border-radius: 20px; 
+    float: left; 
+    margin-left: 5px;
+    margin-right: 10px;
+} 
+.Login-btn:hover{
+    color: #f50418;
+}
+.account-btn{
+    padding:15px; 
+    border-radius: 20px; 
+    float: left; 
+    margin-left: 10px;
+    margin-right: 5px;
+} 
+.account-btn:hover{
+    color: #f50418;
+}
+.cart-btn{ 
+    border-radius: 20px; 
+    float: right; 
+    margin-bottom: 10px; 
+    margin-right: 16px;
+} 
+.cart-btn:hover{
+    color: #f50418;
+}
+input{
+    border-radius: 10px; 
+    border-color: #ff7300; 
+    margin-top: 10px;
+    margin-bottom: 10px; 
+    
+} 
+.container{
+    max-width: 98%;
+     
+} 
+.wrapper{ 
+    margin-right:50px;
+    margin-left: 50px; 
+    width: 80%;
+  
+}
+
+input:hover{
+   background: #f58d04; 
+   cursor: pointer;
+} 
+.welcome{
+    margin-left:7%;
 } 
