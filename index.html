@@ -1,0 +1,392 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GAMEPLAN | Clothing Store</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                GAME<span>PLAN</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shop">Discover</a></li>
+                <li><a href="/shop.html">Shop</a></li>
+                <li><a href="#about">About</a></li>
+                <!-- <li><a href="admin/admin.html">admin</a></li> -->
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <!-- <button class="cart-button" onclick="openCart()">
+                🛒 Cart
+                <span id="cart-count">0</span>
+            </button> -->
+
+        </nav>
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="welcome">WELCOME TO GAMEPLAN</p>
+
+            <h1>
+                WEAR YOUR<br>
+                <span>GAMEPLAN</span>
+            </h1>
+
+            <p>
+                Discover stylish clothing made for people
+                who have a plan, a vision and a unique style.
+            </p>
+
+            <a href="#shop" class="hero-button">
+                SHOP COLLECTION
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- SHOP -->
+    <section class="shop" id="shop">
+
+        <div class="section-title">
+            <p>Discover</p>
+            <h2>Shop Our Clothes</h2>
+        </div>
+
+
+        <!-- SEARCH AND FILTER -->
+        <div class="controls">
+
+            <input
+                type="text"
+                id="search"
+                placeholder="Search clothes..."
+                onkeyup="searchProducts()"
+            >
+
+            <select id="category" onchange="filterProducts()">
+
+                <option value="all">
+                    All Categories
+                </option>
+
+                <option value="tshirts">
+                    T-Shirts
+                </option>
+
+                <option value="hoodies">
+                    Hoodies
+                </option>
+
+                <option value="pants">
+                    Pants
+                </option>
+
+                <option value="jackets">
+                    Jackets
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- PRODUCTS -->
+        <div class="products" id="products">
+
+
+            <!-- PRODUCT 1 -->
+            <div
+                class="product"
+                data-name="GamePlan Black T-Shirt"
+                data-category="tshirts"
+            >
+
+                <div class="product-image black">
+                    <span>GAMEPLAN</span>
+                </div>
+
+                <div class="product-info">
+
+                    <h3>GamePlan Black T-Shirt</h3>
+
+                    <p>Classic cotton T-shirt</p>
+
+                    <div class="product-bottom">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 2 -->
+            <div
+                class="product"
+                data-name="GamePlan White T-Shirt"
+                data-category="tshirts"
+            >
+
+                <div class="product-image white">
+                    <span>GAMEPLAN</span>
+                </div>
+
+                <div class="product-info">
+
+                    <h3>GamePlan White T-Shirt</h3>
+
+                    <p>Premium cotton T-shirt</p>
+
+                    <div class="product-bottom">
+
+                   
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 3 -->
+            <div
+                class="product"
+                data-name="GamePlan Black Hoodie"
+                data-category="hoodies"
+            >
+
+                <div class="product-image hoodie">
+                    <span>GAMEPLAN</span>
+                </div>
+
+                <div class="product-info">
+
+                    <h3>GamePlan Black Hoodie</h3>
+
+                    <p>Comfortable everyday hoodie</p>
+
+                    <div class="product-bottom">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 4 -->
+            <div
+                class="product"
+                data-name="GamePlan Cargo Pants"
+                data-category="pants"
+            >
+
+                <div class="product-image pants">
+                    <span>GP</span>
+                </div>
+
+                <div class="product-info">
+
+                    <h3>GamePlan Cargo Pants</h3>
+
+                    <p>Modern relaxed fit</p>
+
+                    <div class="product-bottom">
+
+                     
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 5 -->
+            <div
+                class="product"
+                data-name="GamePlan Denim Jacket"
+                data-category="jackets"
+            >
+
+                <div class="product-image jacket">
+                    <span>GAMEPLAN</span>
+                </div>
+
+                <div class="product-info">
+
+                    <h3>GamePlan Denim Jacket</h3>
+
+                    <p>Classic denim jacket</p>
+
+                    <div class="product-bottom">
+
+                        
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 6 -->
+            <div
+                class="product"
+                data-name="GamePlan Grey Hoodie"
+                data-category="hoodies"
+            >
+
+                <div class="product-image grey">
+                    <span>GAMEPLAN</span>
+                </div>
+
+                <div class="product-info">
+
+                    <h3>GamePlan Grey Hoodie</h3>
+
+                    <p>Soft premium hoodie</p>
+
+                    <div class="product-bottom">
+
+                      
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+
+        <div class="about-content">
+
+            <p class="welcome">
+                ABOUT GAMEPLAN
+            </p>
+
+            <h2>
+                STYLE WITH<br>
+                <span>A PURPOSE.</span>
+            </h2>
+
+            <p>
+                GamePlan is a clothing brand built around confidence,
+                ambition and individuality. Our collection is designed
+                for people who know where they are going.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+
+        <h2>Contact GamePlan</h2>
+
+        <p>
+            Have a question about our clothes?
+            Send us a message.
+        </p>
+
+        <form onsubmit="sendMessage(event)">
+
+            <input
+                type="text"
+                placeholder="Your Name"
+                required
+            >
+
+            <input
+                type="email"
+                placeholder="Your Email"
+                required
+            >
+
+            <textarea
+                placeholder="Your Message"
+                required
+            ></textarea>
+
+            <button type="submit">
+                SEND MESSAGE
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- CART POPUP -->
+    <!-- <div id="cart-modal" class="cart-modal">
+
+        <div class="cart-box">
+
+            <button
+                class="close"
+                onclick="closeCart()"
+            >
+                ×
+            </button>
+
+            <h2>Your Cart</h2>
+
+            <div id="cart-items"></div>
+
+            <h3>
+                Total:
+                $<span id="cart-total">0.00</span>
+            </h3>
+
+            <button class="checkout" onclick="checkout()">
+                CHECKOUT
+            </button>   
+
+
+        </div>
+
+    </div> -->
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="logo">
+            GAME<span>PLAN</span>
+        </div>
+
+        <p>
+            © 2026 GamePlan Clothing. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

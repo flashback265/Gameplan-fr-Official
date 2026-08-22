@@ -1,0 +1,35 @@
+ecommerce/
+│
+├── index.html
+├── shop.html
+├── product.html
+├── cart.html
+├── checkout.html
+├── login.html
+├── register.html
+│
+├── css/
+│   ├── style.css
+│   ├── shop.css
+│   ├── product.css
+│   ├── cart.css
+│   ├── auth.css
+│   └── responsive.css
+│
+├── js/
+│   ├── app.js
+│   ├── products.js
+│   ├── cart.js
+│   ├── search.js
+│   ├── filter.js
+│   ├── checkout.js
+│   ├── auth.js
+│   └── darkmode.js
+│
+├── assets/
+│   ├── images/
+│   ├── icons/
+│   └── fonts/
+│
+└── data/
+    └── products.json

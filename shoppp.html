@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GAMEPLAN | Clothing Store</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                GAME<span>PLAN</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/shop.html">Shop</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button class="cart-button" onclick="openCart()">
+                🛒 Cart
+                <span id="cart-count">0</span>
+            </button>
+
+        </nav>
+    </header>
+
+    <!-- SHOP -->
+    <section class="shop" id="shop">
+
+        <div class="section-title">
+            <p>GAMEPLAN COLLECTION</p>
+            <h2>Shop Our Clothes</h2>
+        </div>
+
+
+        <!-- SEARCH AND FILTER -->
+        <div class="controls">
+
+            <input
+                type="text"
+                id="search"
+                placeholder="Search clothes..."
+                onkeyup="searchProducts()"
+            >
+
+            <select id="category" onchange="filterProducts()">
+
+                <option value="all">
+                    All Categories
+                </option>
+
+                <option value="tshirts">
+                    T-Shirts
+                </option>
+
+                <option value="hoodies">
+                    Hoodies
+                </option>
+
+                <option value="pants">
+                    Pants
+                </option>
+
+                <option value="jackets">
+                    Jackets
+                </option>
+
+            </select>
+
+        </div> 
+
+
+
+<!-- PRODUCTS -->
+       
+            <div id="products">
+
+        
+            <button>buy</button>
+            <div class="price">27</div> 
+            <img src="" alt="product-images" id = 'product-id' style="display: none;">
+            </div>
+    </section> 
+
+
+    
+
+
+   
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="logo">
+            GAME<span>PLAN</span>
+        </div>
+
+        <p>
+            © 2026 GamePlan Clothing. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+    <script src="fetch.js"></script>
+
+</body>
+</html>
